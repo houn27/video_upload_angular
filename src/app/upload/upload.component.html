@@ -1,0 +1,17 @@
+<div class="upload">
+    <div class="upload-content">
+      @if(hasUpload==false){
+        <mat-icon fontIcon="cloud_upload" class="upload-icon"></mat-icon>
+      }@else{
+        <mat-icon fontIcon="cloud_done" class="upload-icon"></mat-icon>
+      }
+      
+      <!-- <p class="upload-title">upload your videos ...</p> -->
+      <button mat-flat-button color="primary" type="submit" class="upload-btn" (click)="fileInput.click()">
+        upload
+      </button>
+      <input hidden type="file" accept=".mp4" #fileInput (change)="fileChanged($event)"/>
+      <p class="upload-title">{{selectedFile==null?"upload your videos (.mp4) ...":selectedFile?.name}}</p>
+    </div>
+    
+  </div>

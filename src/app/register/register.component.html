@@ -1,0 +1,21 @@
+<div [className]="'login-layout'">
+    <form [formGroup]="registerForm" [className]="'login-body'" (ngSubmit)="onSubmit()">
+        <h1>Register</h1>
+        <br>
+        <mat-form-field appearance="outline" [className]="'login-input'">
+            <input matInput formControlName="account" placeholder="account" required>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" [className]="'login-input'">
+            <input matInput formControlName="nickname" placeholder="nickname" required>
+        </mat-form-field>
+    
+        <mat-form-field appearance="outline" [className]="'login-input'">
+            <input matInput formControlName="password" placeholder="password" required>
+        </mat-form-field>
+    
+        <button mat-flat-button color="primary" type="submit" style="width: 100px;font-size: 16px;">register</button>
+        &nbsp;
+        <button mat-button type="button" style="width: 80px; font-size: 16px; font-weight: 200;" (click)="jumpToHome()">back</button>
+    </form>
+</div>

@@ -1,26 +1,28 @@
-# VideoPlatform
+# Video Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+This is a simple video platform consisting of functions of video uploading, video listing, video playing, user log in/out. 
 
-## Development server
+![](https://raw.githubusercontent.com/houn27/public-img/main/vupload-screenshot-1.png)
+
+![](https://raw.githubusercontent.com/houn27/public-img/main/vupload-screenshot-2.png)
+
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7, including @ngrx/store@17.0.1, @angular/material@17.0.4. Additionally, we provide an alternative state management option through " observable + service " `./utils/user-info.service.ts`.
+
+Here is the backend part used to manage data and interact with database: .
+
+
+## Run project in developing mode
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Add more features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `ng generate component component-name` to generate a new component, then you can implement new features as you want. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Build to deploy
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
 ## Further help
 
