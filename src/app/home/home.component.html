@@ -1,0 +1,35 @@
+
+<main class="main">
+    @if(( id$ | async )!=-1){
+      <div class="home-video-list">
+        <div class="home-video-list-content">
+          <p style="font-size: 18px;font-weight: 200; margin-left: 20px;">you have {{video_list.length}} uploads</p>
+          <section class="home-video-list-main-content">
+            @for (video of video_list; track video.id) {
+              <div class="home-video-list-unit">
+                <video src="/api/{{video.path}}?token={{jwt_token}}" class="home-video-list-video"></video>
+                <div class="home-video-list-intro">
+                  <a class="home-video-list-link" routerLink="/play/{{video.path}}/{{video.name}}/{{video.create_date}}">{{video.name}}</a>
+                  <span class="home-video-list-date">{{timeService.exchange(video.create_date)}}</span>
+                </div>
+                
+              </div>
+            }
+          </section>
+          
+        </div>
+      </div>
+
+    }@else{
+      <div class="home-video-empty">
+        <div class="home-video-empty-content">
+          <mat-icon fontIcon="password" class="home-empty-icon"></mat-icon>
+          <p class="home-video-empty-title">log in to access videos ...</p>
+        </div>
+        
+      </div>
+      
+    }
+
+    
+</main>

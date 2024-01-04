@@ -1,0 +1,10 @@
+<div class="play">
+    <div class="play-content">
+        <video src="/api/{{video_info.path}}?token={{jwt_token}}" class="play-video" controls></video>
+        <section class="play-info">
+            <p class="play-info-name">{{video_info.name}}</p>
+            <p class="play-info-date">{{timeService.exchange(video_info.date)}}</p>
+        </section>
+    </div>
+</div>
+
